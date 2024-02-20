@@ -3,7 +3,7 @@ import Webcam from "react-webcam";
 import Tesseract from "tesseract.js";
 import "../CameraScreen.css";
 
-function CameraScreen({ navigation }) {
+function CameraScreen() {
   const webcamRef = React.useRef(null);
   const [licenseInfo, setLicenseInfo] = useState("");
 
@@ -17,7 +17,7 @@ function CameraScreen({ navigation }) {
       console.log(text);
       setLicenseInfo(text); // Set recognized text to state
     });
-  }, [webcamRef, navigation]);
+  }, [webcamRef]);
 
   return (
     <>
