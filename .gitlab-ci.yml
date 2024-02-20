@@ -20,6 +20,6 @@ deploy:
 
   artifacts:
     paths:
-      - public/
+      - public
   only:
     - main
