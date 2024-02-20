@@ -1,5 +1,9 @@
 # The Docker image that will be used to build your app
-image: node:14
+image: node:latest
+
+variables:
+  PUBLIC_URL: /scanner
+
 
 cache:
   paths:
@@ -18,6 +22,6 @@ deploy:
 
   artifacts:
     paths:
-      - public/
+      - public
   only:
     - main
