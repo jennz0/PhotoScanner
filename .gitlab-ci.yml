@@ -15,8 +15,6 @@ deploy:
   script:
     - npm install        # Install all dependencies
     - npm run build      # Build for prod
-    - npm start
-    - mv build public    # Move build files to public dir for Gitlab Pages
 
 
   artifacts:
