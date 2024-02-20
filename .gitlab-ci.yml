@@ -1,22 +1,40 @@
-image: node:latest
+# image: node:latest
 
-variables:
-  PUBLIC_URL: /scan
+# variables:
+#   PUBLIC_URL: /scan
 
-cache:
-  paths:
-  - node_modules
+# cache:
+#   paths:
+#   - node_modules
 
-stages:
-  - deploy
+# stages:
+#   - deploy
 
-deploy:
+# deploy:
+#   stage: deploy
+#   script:
+#     - npm install        # Install all dependencies
+#     - npm run build      # Build for prod
+
+
+#   artifacts:
+#     paths:
+#       - public
+#   only:
+#     - main
+image: node
+
+pages:
   stage: deploy
+  cache:
+    paths:
+      - node_modules/
   script:
-    - npm install        # Install all dependencies
-    - npm run build      # Build for prod
-
-
+    - npm install
+    - npm run build
+    - rm -rf public
+    - cp build/index.html build/404.html
+    - mv build public
   artifacts:
     paths:
       - public
