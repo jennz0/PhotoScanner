@@ -1,0 +1,48 @@
+/* CameraScreen.css */
+
+h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.camera-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .webcam {
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 16px;
+  }
+  
+  .capture-button {
+    padding: 12px 24px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .capture-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .license-info-container {
+    margin-top: 16px;
+  }
+  
+  .license-info {
+    font-size: 14px;
+  }
+  
+  .no-photo-message {
+    font-size: 14px;
+    color: #ff0000; /* Red color for error message */
+  }
+  
